@@ -1,0 +1,7 @@
+<resources>
+
+    <string name="app_name">json_ex1</string>
+    <string name="title_post_detail">Post Detail</string>
+    <string name="title_post_list">Posts</string>
+
+</resources>

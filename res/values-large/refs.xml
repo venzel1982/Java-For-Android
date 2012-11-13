@@ -1,0 +1,3 @@
+<resources>
+    <item type="layout" name="activity_post_list">@layout/activity_post_twopane</item>
+</resources>
