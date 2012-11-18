@@ -31,6 +31,9 @@ public class PostListFragment extends ListFragment {
 
     public PostListFragment() {
     }
+    /*
+     * создадим Handler который нужен за тем нормально прорисовать листвью   
+     * */
     
     Handler		listChangedHandler = new Handler()
     {
@@ -80,7 +83,7 @@ public class PostListFragment extends ListFragment {
     @Override
     public void onListItemClick(ListView listView, View view, int position, long id) {
         super.onListItemClick(listView, view, position, id);
-        mCallbacks.onItemSelected(FeedContent.ITEMS.get(position).id);
+        mCallbacks.onItemSelected(FeedContent.ITEMS.get(position).getId());
     }
 
     @Override

@@ -23,7 +23,7 @@ public class PostListActivity extends FragmentActivity
                     .setActivateOnItemClick(true);
         }
     }
-
+//
     @Override
     public void onItemSelected(String id) {
         if (mTwoPane) {

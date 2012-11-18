@@ -21,6 +21,7 @@ public class PostDetailFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //получим по ARG_ITEM_ID тек.элемент 
         if (getArguments().containsKey(ARG_ITEM_ID)) {
             mItem = FeedContent.ITEM_MAP.get(getArguments().getString(ARG_ITEM_ID));
         }
@@ -29,10 +30,10 @@ public class PostDetailFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
+    	// если полученное не пусто ложим его в  WebView
         View rootView = inflater.inflate(R.layout.fragment_post_detail, container, false);
         if (mItem != null) {
-//            ((WebView) rootView.findViewById(R.id.post_detail)).setText(mItem.content);
-        	((WebView) rootView.findViewById(R.id.post_detail)).loadDataWithBaseURL("", mItem.content, null, "UTF-8", null);
+        	((WebView) rootView.findViewById(R.id.post_detail)).loadDataWithBaseURL("", mItem.getContent(), null, "UTF-8", null);
         }
         return rootView;
     }
